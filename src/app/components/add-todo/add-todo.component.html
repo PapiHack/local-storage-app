@@ -1,0 +1,19 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Todo - Form</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <form [formGroup]="todoForm">
+      <ion-item>
+        <ion-label position="floating">Todo name</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+      <div class="ion-margin ion-text-end">
+        <ion-button type="button" (click)="addTodo($event, todoForm.value)" class="ion-right" shape="round">
+          Add
+          <ion-icon slot="end" name="create"></ion-icon>
+        </ion-button>
+      </div>
+    </form>
+  </ion-card-content>
+</ion-card>

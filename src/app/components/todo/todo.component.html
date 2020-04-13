@@ -1,0 +1,6 @@
+<ion-item>
+  <ion-label> 
+    {{ todo.name }} {{ todo.complete ? '✅' : '' }} 
+    <span (click)="removeTodo(todo)">❌</span>
+  </ion-label>
+</ion-item>

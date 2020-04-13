@@ -1,0 +1,9 @@
+<ion-list>
+  <div *ngIf="todos.length != 0">
+    <ion-list-header>
+      <ion-label>List of Todos</ion-label>
+    </ion-list-header>
+    <app-todo *ngFor="let todo of todos" [todo]="todo"></app-todo>
+  </div>
+  <h3 *ngIf="todos.length == 0" class="ion-margin">There is no todo yet !</h3>
+</ion-list>
